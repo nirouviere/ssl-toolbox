@@ -168,6 +168,19 @@ $> openssl ca \
 
 # CRL
 
+## Revoking a certificate
+
+You only need the certificate you want to revoke. There are two ways to achieve this
+
+  - You kept the signed certificate
+  - OpenSSL keep signed certificates in `newcerts`. They are named by their indexes in the database. Just read the `index.txt` content to see the serial number and the DN of the certificate you want to revoke
+
+```bash
+$> openssl ca -revoke \
+    cert.pem                  # Certificate you want to revoke
+```
+
+
 # References
 
 Generating
