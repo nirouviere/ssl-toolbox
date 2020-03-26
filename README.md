@@ -223,8 +223,3 @@ You only need the certificate you want to revoke. There are two ways to achieve 
 $> openssl ca -revoke \
     cert.pem                  # Certificate you want to revoke
 ```
-
-
-# References
-
-Generating
