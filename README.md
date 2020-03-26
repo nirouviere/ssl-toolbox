@@ -179,6 +179,8 @@ $> openssl req
 
 # End-user certificates
 
+## Structure
+
 ## Create and sign certificate
 
 The commands are basically going to be the same for all the end-user certificate. Just the configuration file will change and this will be put in another section
