@@ -1,7 +1,49 @@
+Table of Contents
+=================
+
+* [Abstract](#abstract)
+  * [How to use it](#how-to-use-it)
+* [OpenSSL general commands](#openssl-general-commands)
+  * [Generating random numbers](#generating-random-numbers)
+  * [Encrypting data](#encrypting-data)
+  * [Cryptographic keys](#cryptographic-keys)
+    * [RSA keys](#rsa-keys)
+      * [Generate a 4096 bits private RSA file](#generate-a-4096-bits-private-rsa-file)
+    * [EC keys](#ec-keys)
+      * [Generating a new prim256v1 key w/o parameters and print to file](#generating-a-new-prim256v1-key-wo-parameters-and-print-to-file)
+      * [Protecting the EC key with a password](#protecting-the-ec-key-with-a-password)
+      * [Protecting the key without writing to the disk](#protecting-the-key-without-writing-to-the-disk)
+  * [Interacting with server](#interacting-with-server)
+    * [Connecting to client](#connecting-to-client)
+    * [Display full certificate server chain](#display-full-certificate-server-chain)
+* [Root CA](#root-ca)
+  * [Structure](#structure)
+  * [Commands](#commands)
+    * [Generating root CA certificate](#generating-root-ca-certificate)
+* [Intermediate CA](#intermediate-ca)
+  * [Structure](#structure-1)
+  * [Commands](#commands-1)
+    * [Creating the intermediate CA csr](#creating-the-intermediate-ca-csr)
+    * [Signing the intermediate CA certificate](#signing-the-intermediate-ca-certificate)
+* [End\-user certificates](#end-user-certificates)
+  * [Structure](#structure-2)
+  * [Create and sign certificate](#create-and-sign-certificate)
+    * [Creating the private key](#creating-the-private-key)
+    * [Creating a certificate CSR](#creating-a-certificate-csr)
+    * [Sign the certificate](#sign-the-certificate)
+* [CRL](#crl)
+  * [Revoking a certificate](#revoking-a-certificate)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc.go)
+
 
 # Abstract
 
 This repository contains the common openssl commands I often use and always forget, especially when managing a CA.
+
+
+:warning: This is a work in progress. Use at your own risks
+
 
 ## How to use it
 
