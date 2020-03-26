@@ -1,9 +1,42 @@
 
+# Abstract
 
+This repository contains the common openssl commands I often use and always forget, especially when managing a CA.
+
+## How to use it
+
+Simply clone the repository and start using it.
+The various subdirectories needed for the certificate and private keys (private, certs, etc.) all contains a `.gitignore` that will prevent their content from being tracked by git. It basically contains the following snippet
+
+```
+# Ignore everything in this directory
+*
+
+# Except this file
+!.gitignore
+```
 
 # OpenSSL general commands
 
 ## Generating random numbers
+
+Raw generation
+
+```bash
+$> openssl rand 32  # 32: numbers of bytes. Replace by any desired value
+```
+
+Hex encoding
+
+```bash
+$> openssl rand -hex 32
+```
+
+Base64 encoding
+
+```bash
+$> openssl rand -base64 32
+```
 
 ## Encrypting data
 
