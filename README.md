@@ -50,7 +50,7 @@ $> openssl rand -base64 32
 $> openssl genrsa \
     -aes256 \               # Encrypt the private key with aes 256 cbc. Password will be prompted by OpenSSL
     -out private_key.pem \  # Output key to `private_key.pem`
-    4096
+    4096                    # The length of the RSA key
 ```
 
 ### EC keys
